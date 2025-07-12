@@ -1,0 +1,53 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.github.javatoolbox</groupId>
+    <artifactId>args</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <!-- https://maven.apache.org/general.html#How_do_I_prevent_.E2.80.9C.5BWARNING.5D_Using_platform_encoding_.28Cp1252_actually.29_to_copy_filtered_resources.2C_i.e._build_is_platform_dependent.21.E2.80.9D -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- https://maven.apache.org/plugins/maven-compiler-plugin/examples/set-compiler-source-and-target.html -->
+        <!-- Set source language level to Java 23. -->
+        <maven.compiler.source>23</maven.compiler.source>
+
+        <!-- Target JVM 23 and above. -->
+        <maven.compiler.target>23</maven.compiler.target>
+    </properties>
+
+    <dependencies>
+        <!-- Tests are written against the JUnit Jupiter API. -->
+        <!-- https://central.sonatype.com/artifact/org.junit.jupiter/junit-jupiter -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.11.3</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <url>https://repo.maven.apache.org/maven2</url>
+        </repository>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/javatoolbox/javatoolbox</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub javatoolbox Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/javatoolbox/javatoolbox</url>
+        </repository>
+    </distributionManagement>
+</project>
