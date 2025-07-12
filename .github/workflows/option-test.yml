@@ -1,0 +1,18 @@
+name: option-test
+
+on:
+  push:
+    paths:
+      - option/
+
+jobs:
+  option-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '23'
+      # https://maven.apache.org/ref/3.9.10/maven-embedder/cli.html
+      - run: mvn --file=option/pom.xml test
