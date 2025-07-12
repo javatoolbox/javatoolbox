@@ -2,8 +2,10 @@ name: option-test
 
 on:
   push:
+    branches:
+      - main
     paths:
-      - option/
+      - option
 
 jobs:
   option-test:
