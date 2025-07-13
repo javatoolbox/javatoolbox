@@ -1,4 +1,4 @@
 package com.github.javatoolbox.args.internal.parse;
 
-public class CommandAstNode {
+public class AstPositional {
 }

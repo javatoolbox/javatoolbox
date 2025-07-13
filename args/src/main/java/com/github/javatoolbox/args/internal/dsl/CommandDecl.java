@@ -1,4 +1,7 @@
 package com.github.javatoolbox.args.internal.dsl;
 
-public class CommandDecl {
-}
+public sealed interface CommandDecl
+permits
+        RootCommandDecl,
+        SubCommandDecl
+{}

@@ -3,6 +3,7 @@ package com.github.javatoolbox.args.internal.util;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 public final class ImmutableArrayList<T> {
     private final ArrayList<T> hidden;
@@ -26,4 +27,6 @@ public final class ImmutableArrayList<T> {
     // Forward
 
     public int size() { return this.asUnmodifiableList().size(); }
+
+    public boolean contains(Object o) { return this.asUnmodifiableList().contains(o); }
 }

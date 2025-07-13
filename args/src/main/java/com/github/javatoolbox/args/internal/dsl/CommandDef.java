@@ -1,5 +1,7 @@
 package com.github.javatoolbox.args.internal.dsl;
 
-public class CommandDef {
+import com.github.javatoolbox.args.Command;
 
+public class CommandDef {
+    private final Class<? extends Command> clazz;
 }

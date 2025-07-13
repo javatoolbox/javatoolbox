@@ -1,4 +1,4 @@
 package com.github.javatoolbox.args.internal.dsl;
 
-public class RootCommandDecl {
+public final class RootCommandDecl implements CommandDecl {
 }

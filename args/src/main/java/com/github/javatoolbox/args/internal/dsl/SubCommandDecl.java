@@ -1,4 +1,4 @@
 package com.github.javatoolbox.args.internal.dsl;
 
-public class SubCommandDecl {
+public final class SubCommandDecl implements ChildDecl, CommandDecl {
 }
