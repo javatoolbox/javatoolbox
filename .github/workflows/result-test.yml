@@ -1,0 +1,20 @@
+name: result-test
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - result
+
+jobs:
+  result-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '23'
+      # https://maven.apache.org/ref/3.9.10/maven-embedder/cli.html
+      - run: mvn --file=result/pom.xml test
